@@ -1,0 +1,328 @@
+{
+	"info": {
+		"_postman_id": "5108d9e8-58aa-4a82-bd0e-e1cbba926cf2",
+		"name": "Sum With Steps",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27676606"
+	},
+	"item": [
+		{
+			"name": "Generate Sum With Steps",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"num1\": 12112,\n    \"num2\": 2324343\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/sum",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"sum"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"num1\": 12112,\n    \"num2\": 2324343\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/sum",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"sum"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "374"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"176-JwINWKy3WanCLXJVEwZz0aN3hKs\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Jun 2023 15:10:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"sum\": 2336455,\n    \"steps\": {\n        \"step1\": {\n            \"carryString\": \"0\",\n            \"sumString\": \"5\"\n        },\n        \"step2\": {\n            \"carryString\": \"00\",\n            \"sumString\": \"55\"\n        },\n        \"step3\": {\n            \"carryString\": \"000\",\n            \"sumString\": \"455\"\n        },\n        \"step4\": {\n            \"carryString\": \"0000\",\n            \"sumString\": \"6455\"\n        },\n        \"step5\": {\n            \"carryString\": \"00000\",\n            \"sumString\": \"36455\"\n        },\n        \"step6\": {\n            \"carryString\": \"000000\",\n            \"sumString\": \"336455\"\n        },\n        \"step7\": {\n            \"carryString\": \"000000\",\n            \"sumString\": \"2336455\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Save sum to logs table",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"num1\": 12112,\n    \"num2\": 2324343\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/sum",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"sum"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"num1\": 12112,\n    \"num2\": 2324343\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/sum-logs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"sum-logs"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Jun 2023 15:11:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Get sum logs with pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/sum-logs?limit=2&page=1",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"sum-logs"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "2"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/sum-logs?limit=2&page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"sum-logs"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "791"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"317-L/SgpGjKUlxGyJXFK6ofPof3TSs\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Jun 2023 15:12:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"records\": [\n        {\n            \"id\": 2,\n            \"first_number\": 19232,\n            \"second_number\": 1213,\n            \"steps\": {\n                \"step1\": {\n                    \"carryString\": \"0\",\n                    \"sumString\": \"5\"\n                },\n                \"step2\": {\n                    \"carryString\": \"00\",\n                    \"sumString\": \"45\"\n                },\n                \"step3\": {\n                    \"carryString\": \"000\",\n                    \"sumString\": \"445\"\n                },\n                \"step4\": {\n                    \"carryString\": \"1000\",\n                    \"sumString\": \"0445\"\n                },\n                \"step5\": {\n                    \"carryString\": \"1000\",\n                    \"sumString\": \"20445\"\n                }\n            }\n        },\n        {\n            \"id\": 3,\n            \"first_number\": 71221212,\n            \"second_number\": 6,\n            \"steps\": {\n                \"step1\": {\n                    \"carryString\": \"0\",\n                    \"sumString\": \"8\"\n                },\n                \"step2\": {\n                    \"carryString\": \"00\",\n                    \"sumString\": \"18\"\n                },\n                \"step3\": {\n                    \"carryString\": \"000\",\n                    \"sumString\": \"218\"\n                },\n                \"step4\": {\n                    \"carryString\": \"0000\",\n                    \"sumString\": \"1218\"\n                },\n                \"step5\": {\n                    \"carryString\": \"00000\",\n                    \"sumString\": \"21218\"\n                },\n                \"step6\": {\n                    \"carryString\": \"000000\",\n                    \"sumString\": \"221218\"\n                },\n                \"step7\": {\n                    \"carryString\": \"0000000\",\n                    \"sumString\": \"1221218\"\n                },\n                \"step8\": {\n                    \"carryString\": \"0000000\",\n                    \"sumString\": \"71221218\"\n                }\n            }\n        }\n    ],\n    \"total\": 5\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_URL",
+			"value": "http://localhost:4000",
+			"type": "string"
+		}
+	]
+}

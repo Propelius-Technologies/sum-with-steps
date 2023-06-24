@@ -20,11 +20,11 @@ app.post('/api/sum', (req, res) => {
     error: "Invalid request body"
   });
 
-  const num1 = req.body.num1;
-  const num2 = req.body.num2;
+  const num1 = Number(req.body.num1);
+  const num2 = Number(req.body.num2);
 
   // validate num1 and num2 to be positive integers
-  if (typeof num1 !== 'number' || typeof num2 !== 'number' || num1 < 0 || num2 < 0) {
+  if (isNaN(num1) || isNaN(num2) || num1 < 0 || num2 < 0) {
     return res.status(400).send({
       error: 'num1 and num2 must be positive integers',
     });
@@ -110,6 +110,15 @@ app.get('/api/sum-logs', async (req, res) => {
     });
   }
 });
+
+// global error handler
+app.use((err: any, req: any, res: any, next: any) => {
+  console.error(err);
+
+  return res.status(500).send({
+    error: 'Internal server error',
+  });
+})
 
 app.listen(4000, () => {
   console.log('Express app listening on port 4000!');
