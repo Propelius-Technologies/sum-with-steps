@@ -16,6 +16,8 @@ export function sumWithSteps(a: number, b: number): Record<string, Step> {
 
   const largestNumberLength = Math.max(aStr.length, bStr.length);
 
+  console.log(aStr, bStr, largestNumberLength)
+
   // Loop through each digit of the two numbers and add them together
   for (let i = 1; i <= largestNumberLength; i++) {
     const aDigit = parseInt(aStr[aStr.length - i], 10) || 0;

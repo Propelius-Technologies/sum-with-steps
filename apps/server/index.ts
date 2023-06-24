@@ -21,7 +21,7 @@ app.post('/api/sum', (req, res) => {
   });
 
   const num1 = req.body.num1;
-  const num2 = req.body.num1;
+  const num2 = req.body.num2;
 
   // validate num1 and num2 to be positive integers
   if (typeof num1 !== 'number' || typeof num2 !== 'number' || num1 < 0 || num2 < 0) {
