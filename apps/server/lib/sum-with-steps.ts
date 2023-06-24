@@ -23,8 +23,6 @@ export function sumWithSteps(a: number, b: number): Record<string, Step> {
 
     let sum = aDigit + bDigit + carry;
 
-    console.log(aDigit, bDigit, carry, "=", sum);
-
     // If the sum of the digits is greater than 9, then carry over the 1 to the next digit
     if (i === largestNumberLength) {
       sumString = sum + sumString;

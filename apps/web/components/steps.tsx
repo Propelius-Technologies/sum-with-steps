@@ -6,7 +6,7 @@ interface StepsProps {
 
 export function Steps({steps}: StepsProps) {
   return (
-    <div>
+    <div className='bg-gray-200 p-2 my-4'>
       <pre>
         {JSON.stringify(steps, null, 2)}
       </pre>
