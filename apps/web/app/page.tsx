@@ -1,10 +1,34 @@
-import { Button, Header } from "ui";
+"use client";
+import {AdditionForm} from "components/AdditionForm";
+import {useState} from "react";
+import {sumWithSteps, SumWithStepsResponse} from "lib/api";
+import {Steps} from "components/Steps";
+
 
 export default function Page() {
+  const [loading, setLoading] = useState(false)
+  const [result, setResult] = useState<SumWithStepsResponse | null>(null)
+
+  const handleSubmit = async (firstNumber: number, secondNumber: number) => {
+    setLoading(true)
+    const response = await sumWithSteps(firstNumber, secondNumber)
+    setResult(response)
+    setLoading(false)
+  }
+
   return (
-    <>
-      <Header text="Web" />
-      <Button />
-    </>
+    <div>
+      <h1>Step Addition</h1>
+      <AdditionForm
+        onSubmit={handleSubmit}
+        loading={loading}
+      />
+
+      {
+        result && (
+          <Steps steps={result.steps}/>
+        )
+      }
+    </div>
   );
 }
