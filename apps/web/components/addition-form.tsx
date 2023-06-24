@@ -15,12 +15,12 @@ export function AdditionForm({onSubmit, loading}: AdditionFormProps) {
     <div>
       <div className='flex items-center'>
         <div className='w-full'>First Number:</div>
-        <Input min={1} type="number" id="firstNumber" value={firstNumber}
+        <Input min={1} max={9223372036854775806} type="number" id="firstNumber" value={firstNumber}
                onChange={e => setFirstNumber(e.target.valueAsNumber)}/>
       </div>
       <div className='flex items-center mt-4'>
         <div className='w-full'> Second Number:</div>
-        <Input min={1} type="number" id="secondNumber"
+        <Input min={1} max={9223372036854775806} type="number" id="secondNumber"
                value={secondNumber}
                onChange={e => setSecondNumber(e.target.valueAsNumber)}
         />

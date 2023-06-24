@@ -1,0 +1,49 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "id": "eef7d9c6-9aed-43cb-b543-e78772f7d4c8",
+  "prevId": "49f49295-62a0-43a1-b293-bbd11c3a21b8",
+  "tables": {
+    "sum_logs": {
+      "name": "sum_logs",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "first_number": {
+          "name": "first_number",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "second_number": {
+          "name": "second_number",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "steps": {
+          "name": "steps",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'{}'"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {}
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  }
+}
